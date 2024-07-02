@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Task Manager</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="history">History</a></li>
+                <li><a href="#" class="nav-link" data-page="settings">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="page active">
+            <h1>Home</h1>
+            <button id="openTaskModal" class="add-task-btn">Add Task</button>
+            <ul id="taskList" class="task-list"></ul>
+        </section>
+        <section id="history" class="page">
+            <h1>History</h1>
+            <ul id="historyList" class="task-list"></ul>
+        </section>
+        <section id="settings" class="page">
+            <h1>Settings</h1>
+            <label>
+                Dark Mode:
+                <input type="checkbox" id="darkModeToggle">
+            </label>
+        </section>
+    </main>
+
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Task</h2>
+            <form id="taskForm">
+                <input type="text" id="taskInput" placeholder="Enter task...">
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Confirm Deletion</h2>
+            <p>Are you sure you want to delete this task?</p>
+            <button id="confirmDelete">Yes</button>
+            <button id="cancelDelete">No</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
